@@ -6,13 +6,13 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 16:41:51 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/05 21:49:20 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/10 20:57:43 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int    ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
     return (ft_isalpha(c) || ft_isdigit(c));                                                                                                                             
 }

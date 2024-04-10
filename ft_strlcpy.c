@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 21:52:11 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/10 21:01:12 by cgombos          ###   ########.fr       */
+/*   Created: 2024/04/06 19:01:55 by cgombos           #+#    #+#             */
+/*   Updated: 2024/04/09 19:12:56 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 
-int ft_isascii(int c)
+size_t  ft_strlcpy(char *dest, const char *src, size_t dest_size)
 {
-    return (c >= 0 && c < 128);
+    size_t i;
+
+    i = 0;
+    if (size > 0)
+    {
+
+    }
 }
