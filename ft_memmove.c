@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 23:33:07 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/13 00:01:30 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/16 18:33:58 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,24 @@ array to dest.
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	unsigned char *d;
-	unsigned char *s;
-	unsigned char *temp;
+	unsigned char	*d;
+	unsigned char	*s;
 
 	d = (unsigned char *) dest;
 	s = (unsigned char *) src;
 	if (!dest && !src)
 		return (dest);
-	while (len--)
-		*(s++) = *(temp++);
+	if (s < d || s + len > d)
+	{
+		while(len-- > 0)
+			d[len] = s[len];
+	}
+	else
+	{
+		while (len-- > 0)
+			*d++ = *s++; 
+	}
 	return	(dest);
 }

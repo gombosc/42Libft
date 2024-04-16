@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/06 19:01:55 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/16 20:10:34 by cgombos          ###   ########.fr       */
+/*   Created: 2024/04/16 22:39:27 by cgombos           #+#    #+#             */
+/*   Updated: 2024/04/16 23:16:09 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlcpy(char *dst, const char *src, size_t dst_size)
+char *ft_strchr(const char *s, int c)
 {
-    size_t src_len;
+	char	cc;
 
-    src_len = ft_strlen(src);
-	if (src_len + 1 < dst_size)
-		ft_memcpy(dst, src, src_len + 1);
-	else if (dst_size != 0)
+	cc = (char) c;
+	while (*s)
 	{
-		ft_memcpy(dst, src, dst_size - 1);
-		dst[dst_size - 1] = 0;
+		if (*s == cc)
+			return ((char *)s);
+		s++;
 	}
-	return (src_len);
+	return (NULL);
+}
+
+int main() {
+  char *str = "Hello, world!";
+  char ch = 'H';
+  char *expected = str;  // Points to 'o' in "Hello"
+  char *result = ft_strchr(str, ch);
+  printf("Test: Expected: %p, Result: %p\n", expected, result);
+  return 0;
 }

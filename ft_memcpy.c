@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 22:02:07 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/12 23:31:36 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/16 19:48:27 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	s = (unsigned char *) src;
 	if (!dest && !src)
 		return (dest);
-	while (len--)
+	while (len-- > 0)
 		*(d++) = *(s++);
 	return (dest);
 }
