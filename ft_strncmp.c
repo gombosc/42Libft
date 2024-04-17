@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 22:39:27 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/17 18:10:53 by cgombos          ###   ########.fr       */
+/*   Created: 2024/04/17 18:08:30 by cgombos           #+#    #+#             */
+/*   Updated: 2024/04/17 18:31:24 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	cc;
-
-	cc = (char) c;
-	while (*s)
+    size_t i;
+    
+    i = 0;
+    while ((s1[i] || s2[i]) && i < n)
 	{
-		if (*s == cc)
-			return ((char *)s);
-		s++;
+		if ((unsigned char) s1[i] != (unsigned char) s2[i])
+			return ((unsigned char) s1[i] - (unsigned char) s2[i]);
+		i++;
 	}
-	return (NULL);
+	return (0);
 }
-
-/*
-int main() {
-  char *str = "Hello, world!";
-  char ch = 'H';
-  char *expected = str;  // Points to 'o' in "Hello"
-  char *result = ft_strchr(str, ch);
-  printf("Test: Expected: %p, Result: %p\n", expected, result);
-  return 0;
-}
-*/

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 22:39:27 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/17 18:10:53 by cgombos          ###   ########.fr       */
+/*   Created: 2024/04/17 18:32:02 by cgombos           #+#    #+#             */
+/*   Updated: 2024/04/17 18:45:57 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	char	cc;
+	unsigned char	*str;
+	unsigned char	cc;
+	size_t	i;
 
-	cc = (char) c;
-	while (*s)
+	str = (unsigned char) s;
+	cc = (unsigned char) c;
+	i = 0;
+
+	while (i < n)
 	{
-		if (*s == cc)
-			return ((char *)s);
-		s++;
+		if (str[i] == cc)
+			return ((void *) &str[i]);
+		i++;
 	}
 	return (NULL);
 }
-
-/*
-int main() {
-  char *str = "Hello, world!";
-  char ch = 'H';
-  char *expected = str;  // Points to 'o' in "Hello"
-  char *result = ft_strchr(str, ch);
-  printf("Test: Expected: %p, Result: %p\n", expected, result);
-  return 0;
-}
-*/

@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 22:39:27 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/17 18:10:53 by cgombos          ###   ########.fr       */
+/*   Created: 2024/04/17 19:30:54 by cgombos           #+#    #+#             */
+/*   Updated: 2024/04/17 19:40:58 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char *ft_strnst(const char *haystack, const char *needle, size_t len)
 {
-	char	cc;
-
-	cc = (char) c;
-	while (*s)
+	size_t	i;
+    size_t	j;
+    
+    i = 0;
+    j = 0;
+	if (needle[0] == 0)
+        return ((char *) haystack);
+	while (haystack[i] && i < len)
 	{
-		if (*s == cc)
-			return ((char *)s);
-		s++;
+		/* code */
 	}
-	return (NULL);
+	
 }
-
-/*
-int main() {
-  char *str = "Hello, world!";
-  char ch = 'H';
-  char *expected = str;  // Points to 'o' in "Hello"
-  char *result = ft_strchr(str, ch);
-  printf("Test: Expected: %p, Result: %p\n", expected, result);
-  return 0;
-}
-*/
