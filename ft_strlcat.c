@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/**
+ * Concatenates the string `src` to the end of the string `dst`, ensuring that
+ * the resulting string is null-terminated and does not exceed `dstsize` bytes.
+ *
+ * @param dst The destination string.
+ * @param src The source string.
+ * @param dstsize The size of the destination buffer.
+ * @return The total length of the string that would have been created if
+ *         `dstsize` had been large enough.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	d_len;
