@@ -5,7 +5,7 @@ NAME = libft.a # Library name
 CC = gcc # Compiler
 CCFLAGS = -Wall -Wextra -Werror # Compiler flags
 RM = rm -f
-SRCS = ft_isalnum.c \
+SRCS = 	ft_isalnum.c \
 		ft_isdigit.c \
 		ft_isalpha.c \
 		ft_isascii.c \
@@ -25,8 +25,8 @@ SRCS = ft_isalnum.c \
 		ft_strncmp.c \
 		ft_strlcat.c \
 		ft_strnstr.c \
-		ft_atoi.c \
-		ft_calloc.c \
+		ft_atoi.c 
+		# ft_calloc.c \
 
 OBJS = $(SRCS:.c=.o) # Object Files
 

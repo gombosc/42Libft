@@ -6,10 +6,11 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 21:52:11 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/10 21:01:12 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/23 16:30:39 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int ft_isascii(int c)
 {
