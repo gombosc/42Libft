@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:46:47 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/23 16:17:37 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 18:47:03 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
 // Character functions
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isascii(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
+int ft_isalpha(int c);
+int	ft_isascii(int c);
+int ft_isdigit(int c);
+int ft_isalnum(int c);
+int ft_isprint(int c);
+int ft_tolower(int c);
+int	ft_toupper(int c);
 // String functions
-size_t		ft_strlcpy(char *dst, const char *src, size_t dst_size);
-size_t		ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
+size_t	ft_strlen(const char *s);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);

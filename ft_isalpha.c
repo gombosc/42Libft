@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 19:35:15 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/23 17:44:39 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/23 18:04:08 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int ft_isalpha(int c)
         return (0);
 }
 
-int main()
-{
-	char c = 'a';
-	int result = ft_isalpha(c);
-	printf("Result: %d\n", result);
+// int main()
+// {
+// 	char c = 'a';
+// 	int result = ft_isalpha(c);
+// 	printf("Result: %d\n", result);
 	
-	return 0;
-}
+// 	return 0;
+// }

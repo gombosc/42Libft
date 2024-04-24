@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 16:41:51 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/23 17:53:07 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 18:47:10 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_isalnum(int c)
 
 int main()
 {
-	char c = 'a';
+	char c = 's';
 	int result = ft_isalnum(c);
 	printf("Result: %d\n", result);
 	
