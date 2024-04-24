@@ -6,17 +6,17 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 22:39:27 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/17 18:10:27 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:18:00 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	cc;
 	char	*res;
-	
+
 	cc = (char) c;
 	res = NULL;
 	while (*s)
@@ -25,7 +25,6 @@ char *ft_strrchr(const char *s, int c)
 			res = ((char *)s);
 		s++;
 	}
-	
 	return (res);
 }
 

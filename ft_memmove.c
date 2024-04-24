@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 23:33:07 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/16 18:33:58 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:09:14 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		return (dest);
 	if (s < d || s + len > d)
 	{
-		while(len-- > 0)
+		while (len-- > 0)
 			d[len] = s[len];
 	}
 	else
 	{
 		while (len-- > 0)
-			*d++ = *s++; 
+			*d++ = *s++;
 	}
-	return	(dest);
+	return (dest);
 }

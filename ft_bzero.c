@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 21:49:02 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/13 00:09:18 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:06:26 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_bzero(void *s, size_t len)
 {
 	unsigned char	*ptr;
 
-	ptr = (unsigned char *) s;
-	while(len--)
+	ptr = (unsigned char *)s;
+	while (len--)
 		*(ptr++) = 0;
 }

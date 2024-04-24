@@ -2,7 +2,7 @@
 
 # Variables
 NAME = libft.a # Library name
-CC = gcc # Compiler
+CC = cc # Compiler
 CCFLAGS = -Wall -Wextra -Werror # Compiler flags
 RM = rm -f
 SRCS = 	ft_isalnum.c \
@@ -25,8 +25,9 @@ SRCS = 	ft_isalnum.c \
 		ft_strncmp.c \
 		ft_strlcat.c \
 		ft_strnstr.c \
-		ft_atoi.c 
-		# ft_calloc.c \
+		ft_atoi.c \
+		ft_calloc.c \
+		ft.strdup.c 
 
 OBJS = $(SRCS:.c=.o) # Object Files
 

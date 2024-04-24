@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 20:43:19 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/12 21:48:20 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:04:14 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ RETURN VALUE
 
 void	*ft_memset(void *s, int c, size_t len)
 {
-	unsigned char *ptr;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *) s;
 	if (!s)

@@ -6,20 +6,14 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:28:56 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/23 20:31:13 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 20:49:21 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+int	ft_atoi(const char *str)
 {
-	return (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r');
-}
-
- int	ft_atoi(const char *str)
- {
 	int	sign;
 	int	result;
 
@@ -39,16 +33,17 @@ static int	ft_isspace(int c)
 		str++;
 	}
 	return (result * sign);
- }
+}
 
- int main()
+/*
+int main()
 {
 	const char* str = "   	123abc";
 	int result = ft_atoi(str);
 	printf("Result: %d\n", result);
-	
 	return 0;
 }
+*/
 	/* 
     test_atoi("123", 123);
     test_atoi("-456", -456);

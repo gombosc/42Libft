@@ -6,13 +6,13 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 21:52:11 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/23 16:30:39 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:07:50 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c < 128);
+	return (c >= 0 && c < 128);
 }

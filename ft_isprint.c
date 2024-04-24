@@ -6,13 +6,13 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:53:24 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/10 20:58:47 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:00:51 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

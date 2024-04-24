@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 19:35:15 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/24 21:07:32 by cgombos          ###   ########.fr       */
+/*   Created: 2024/04/24 20:28:53 by cgombos           #+#    #+#             */
+/*   Updated: 2024/04/24 21:20:24 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strdup(const char *s1)
 {
-	if ((c >= 'a' && c <= 'z') || c >= 'A' && c <= 'Z')
-		return (1);
-	else
-		return (0);
+	char	*ptr;
+	size_t	len;
+
+	if (!s1)
+		return (NULL);
+	len = ft_strlen(s1);
+	ptr = malloc(len + 1);
+	if (!ptr)
+		return (NULL);
+	ft_memcpy(ptr, s1, len);
+	ptr[len] = '\0';
+	return (ptr);
 }
 
-// int main()
-// {
-// 	char c = 'a';
-// 	int result = ft_isalpha(c);
-// 	printf("Result: %d\n", result);
-// 	return 0;
-// }
+/*
+int main()
+{
+	char *str = ft_strdup("Hello World!");
+	printf("%s\n", str);
+	return 0;
+}
+*/

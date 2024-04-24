@@ -6,17 +6,17 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 19:01:55 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/18 23:09:30 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:12:52 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlcpy(char *dst, const char *src, size_t dst_size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
-    size_t src_len;
+	size_t	src_len;
 
-    src_len = ft_strlen(src);
+	src_len = ft_strlen(src);
 	if (src_len + 1 < dst_size)
 		ft_memcpy(dst, src, src_len + 1);
 	else if (dst_size != 0)
