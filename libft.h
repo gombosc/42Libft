@@ -6,19 +6,19 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:46:47 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/24 21:25:32 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/24 21:46:31 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+# include <math.h>
 // Character functions
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -48,4 +48,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 // String manipulation functions
 char	*ft_strdup(const char *s1);
+
+//additional
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 #endif
