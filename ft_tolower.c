@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 20:01:35 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/24 21:18:25 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/04/30 14:31:54 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c -= 32);
+		return (c += 32);
 	else
 		return (c);
 }
