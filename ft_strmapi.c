@@ -6,13 +6,13 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 20:22:25 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/09 21:53:40 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/12 20:53:58 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	size_t	i;

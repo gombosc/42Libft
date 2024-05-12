@@ -1,4 +1,14 @@
-
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/05/10 21:29:21 by cgombos           #+#    #+#              #
+#    Updated: 2024/05/10 21:34:08 by cgombos          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 # Variables
 NAME = libft.a # Library name
@@ -27,8 +37,18 @@ SRCS = 	ft_isalnum.c \
 		ft_strnstr.c \
 		ft_atoi.c \
 		ft_calloc.c \
-		ft.strdup.c 
-
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+		
 OBJS = $(SRCS:.c=.o) # Object Files
 
 # Rules
@@ -43,4 +63,3 @@ fclean: clean
 
 re: fclean all	
 .PHONY: all clean fclean
-

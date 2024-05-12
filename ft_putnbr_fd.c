@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 22:25:40 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/09 22:39:39 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/12 20:55:39 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
-
+/*
 int main()
 {
-	ft_putnbr_fd(42, 1);
+	ft_putnbr_fd(423, 1);
 	return 0;
 }
+*/

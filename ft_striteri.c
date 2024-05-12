@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 21:57:40 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/09 22:01:10 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/12 20:54:42 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ void	my_func(unsigned int i, char *str)
 	if (*str >= 'a' && *str <= 'z')
 		*str -= 32;
 }
-
-int main(void)
+/*
+int	main(void)
 {
 	char	str[] = "Hello, World!";
 	ft_striteri(str, my_func);
 	printf("%s\n", str);
 	return (0);
 }
+*/

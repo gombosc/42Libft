@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:46:47 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/09 18:58:44 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/10 20:57:21 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,11 @@ char	*ft_strdup(const char *s1);
 
 //additional
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+// String manipulation functions
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

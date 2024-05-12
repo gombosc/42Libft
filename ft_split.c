@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:16:14 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/09 18:58:38 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/12 20:47:21 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ static size_t	count_words(char const *s, char c)
 			while (*s && *s != c)
 				s++;
 		}
-		if(!*s)
-			break; // count the word
-		s++; // move to the next character
+		if (!*s)
+			break ;
+		s++;
 	}
 	return (words);
 }
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 	arr[i] = NULL;
 	return (arr);
 }
-
+/*
 int main()
 {
 	char *s = "Hello, world!";
@@ -89,3 +89,4 @@ int main()
 	}
 	return (0);
 }
+*/

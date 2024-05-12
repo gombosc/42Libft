@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 19:01:22 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/09 20:20:58 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/12 20:51:22 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ char	*ft_itoa(int n)
 
 	len = 1;
 	nbr = n;
-	while (nbr /= 10)
+	while (nbr)
+	{
+		nbr /= 10;
 		len++;
+	}
 	if (n < 0)
 		len++;
 	str = (char *)malloc(sizeof(char) * (len + 1));
