@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:46:47 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/10 20:57:21 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/13 23:04:17 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 // String manipulation functions
 char	*ft_strdup(const char *s1);
+
+char	**ft_split(char const *s, char c);
 
 //additional
 char	*ft_substr(char const *s, unsigned int start, size_t len);

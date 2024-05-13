@@ -6,11 +6,17 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:28:56 by cgombos           #+#    #+#             */
-/*   Updated: 2024/04/24 20:49:21 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/13 22:45:56 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ftt_isspace(int c)
+{
+	return (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r');
+}
 
 int	ft_atoi(const char *str)
 {
@@ -19,7 +25,7 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	result = 0;
-	while (ft_isspace(*str))
+	while (ftt_isspace(*str))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
@@ -29,12 +35,11 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		result = result * 10 + *str - '0';
+		result = result * 10 + (*str) - '0';
 		str++;
 	}
 	return (result * sign);
 }
-
 /*
 int main()
 {
@@ -44,7 +49,7 @@ int main()
 	return 0;
 }
 */
-	/* 
+/*
     test_atoi("123", 123);
     test_atoi("-456", -456);
     test_atoi("+789", 789);
@@ -64,4 +69,4 @@ int main()
     test_atoi("   def-456", 0);
     test_atoi("   xyz+789", 0);
     test_atoi("   ", 0);
-    */
+*/
