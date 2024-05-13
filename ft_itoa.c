@@ -6,11 +6,30 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 19:01:22 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/12 20:51:22 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/13 18:42:27 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	set_digits(char *str, int n, int len)
+{
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = -n;
+	}
+	else if (n == 0)
+		str[0] = '0';
+	while (len-- > (n <= 0))
+	{
+		if (n < 0)
+			str[len] = -(n % 10) + '0';
+		else
+			str[len] = n % 10 + '0';
+		n /= 10;
+	}
+}
 
 char	*ft_itoa(int n)
 {
@@ -18,7 +37,7 @@ char	*ft_itoa(int n)
 	int		len;
 	int		nbr;
 
-	len = 1;
+	len = 0;
 	nbr = n;
 	while (nbr)
 	{
@@ -31,21 +50,13 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	if (n < 0)
-		str[0] = '-';
-	else if (n == 0)
-		str[0] = '0';
-	while (len-- > (n <= 0))
-	{
-		str[len] = (n < 0 ? -(n % 10) : n % 10) + '0';
-		n /= 10;
-	}
+	set_digits(str, n, len);
 	return (str);
 }
 /*
 int	main(void)
 {
-	int	n = -123;
+	int	n = -12345;
 	char	*str = ft_itoa(n);
 	printf("%s\n", str);
 	free(str);

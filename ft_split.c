@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:16:14 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/12 20:47:21 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/13 17:56:28 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,13 @@ static size_t	word_len(char const *s, char c)
 	return (len);
 }
 
+void	free_arr(char **arr, size_t i)
+{
+	while (i > 0)
+		free(arr[--i]);
+	free(arr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
@@ -63,15 +70,12 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		arr[i] = ft_substr(s, 0, word_len(s, c));
-		if (!arr[i])
+		if (!arr[i++])
 		{
-			while (i > 0)
-				free(arr[i--]);
-			free(arr);
+			free_arr(arr, i);
 			return (NULL);
 		}
 		s += word_len(s, c);
-		i++;
 	}
 	arr[i] = NULL;
 	return (arr);

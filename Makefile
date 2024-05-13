@@ -1,20 +1,14 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/10 21:29:21 by cgombos           #+#    #+#              #
-#    Updated: 2024/05/10 21:34:08 by cgombos          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+# Library name
+NAME = libft.a 
 
-# Variables
-NAME = libft.a # Library name
-CC = cc # Compiler
-CCFLAGS = -Wall -Wextra -Werror # Compiler flags
+# Compiler
+CC = cc 
+
+# Compiler flags
+CCFLAGS = -Wall -Wextra -Werror 
+
 RM = rm -f
+
 SRCS = 	ft_isalnum.c \
 		ft_isdigit.c \
 		ft_isalpha.c \
@@ -48,11 +42,13 @@ SRCS = 	ft_isalnum.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		
+
 OBJS = $(SRCS:.c=.o) # Object Files
 
 # Rules
-all : $(OBJS)
+all : $(NAME)
+
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
@@ -62,4 +58,4 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all	
-.PHONY: all clean fclean
+.PHONY: all clean fclean re
