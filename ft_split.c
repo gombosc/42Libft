@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:16:14 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/13 17:56:28 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/14 18:30:32 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	word_len(char const *s, char c)
 	return (len);
 }
 
-void	free_arr(char **arr, size_t i)
+static void	free_arr(char **arr, size_t i)
 {
 	while (i > 0)
 		free(arr[--i]);

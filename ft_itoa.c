@@ -6,13 +6,13 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 19:01:22 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/14 16:39:15 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/14 18:13:25 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	set_digits(char *str, int n, int len)
+static void	set_digits(char *str, int n, int len)
 {
 	if (n < 0)
 	{
@@ -33,9 +33,9 @@ void	set_digits(char *str, int n, int len)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		len;
-	int		nbr;
+	char		*str;
+	long int	len;
+	int			nbr;
 
 	len = 0;
 	nbr = n;
@@ -55,6 +55,7 @@ char	*ft_itoa(int n)
 	set_digits(str, n, len);
 	return (str);
 }
+
 /*
 int	main(void)
 {

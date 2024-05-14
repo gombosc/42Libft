@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:46:47 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/14 17:06:35 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/14 18:03:52 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <string.h>
-# include <math.h>
+# include <stdint.h>
+
 // Character functions
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
