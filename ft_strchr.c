@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 22:39:27 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/13 21:07:10 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/14 16:23:19 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	return (0);
+	if (*s == cc)
+		return ((char *)s);
+	return (NULL);
 }
 
 /*

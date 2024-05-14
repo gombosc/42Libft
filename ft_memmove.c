@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 23:33:07 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/13 23:05:59 by cgombos          ###   ########.fr       */
+/*   Created: 2024/05/14 14:48:40 by cgombos           #+#    #+#             */
+/*   Updated: 2024/05/14 15:16:04 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,28 @@ array to dest.
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 
-	d = (unsigned char *) dest;
-	s = (unsigned char *) src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	if (!dest && !src)
 		return (dest);
-	if (s < d || s + len > d)
+	if (s < d)
 	{
-		while (len-- > 0)
-			d[len] = s[len];
+		while (n--)
+			d[n] = s[n];
 	}
 	else
 	{
-		while (len-- > 0)
+		while (n-- > 0)
 			*d++ = *s++;
 	}
 	return (dest);
 }
-
+/*
 int main(void)
 {
 	char src[] = "123456789";
@@ -61,3 +61,4 @@ int main(void)
 	printf("dest2: %s\n", dest2);
 	return (0);
 }
+*/
