@@ -6,16 +6,9 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:48:40 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/14 19:03:40 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/15 20:37:55 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-The memory areas may overlap: copying takes place as though
-the  bytes in src are first copied into a temporary array that does not
-overlap src or dest, and the bytes are then copied from  the  temporary
-array to dest.
-*/
 
 #include "libft.h"
 

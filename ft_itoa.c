@@ -6,7 +6,7 @@
 /*   By: cgombos <cgombos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 19:01:22 by cgombos           #+#    #+#             */
-/*   Updated: 2024/05/14 18:13:25 by cgombos          ###   ########.fr       */
+/*   Updated: 2024/05/15 20:34:31 by cgombos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,12 @@ char	*ft_itoa(int n)
 	set_digits(str, n, len);
 	return (str);
 }
+// #include <stdio.h>
+// // for itoa
+// #include <string.h>
 
-/*
-int	main(void)
-{
-	int	n = -12345;
-	char	*str = ft_itoa(n);
-	printf("%s\n", str);
-	free(str);
-	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(-2147483648));
+// 	return (0);
+// }
